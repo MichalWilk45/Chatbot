@@ -1,0 +1,50 @@
+version: "3.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: ask for menu
+  steps:
+    - intent: ask_menu
+    - action: action_show_menu
+
+- story: ask for hours
+  steps:
+    - intent: ask_opening_hours
+    - action: action_show_opening_hours
+
+- story: greet the user
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- story: place an order 
+  steps:
+    - intent: place_an_order
+    - action: action_add_and_save_order

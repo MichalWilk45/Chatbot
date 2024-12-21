@@ -1,0 +1,19 @@
+virt_env/
+config.py
+
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+config.
+
+# Ignore environment configuration files (optional)
+.env
+.env.*
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore log files (optional)
+*.log
